@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">ImplicitIntent</string>
+    <string name="btn_dial">dial</string>
+    <string name="btn_webpage">web</string>
+    <string name="btn_alipay">alipay</string>
+    <string name="btn_for_result">fetch</string>
+    <string name="hint_result">Surprise!</string>
+    <string name="chooser_title">Please chooose one</string>
+    <string name="alipay_notfound">Please install alipay first</string>
+    <string name="content_for_share">Intend to be an image</string>
+</resources>
