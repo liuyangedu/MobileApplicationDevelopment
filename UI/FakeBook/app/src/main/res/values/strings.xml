@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">FakeBook</string>
+    <string name="hint_pwd">Password</string>
+    <string name="hint_usr">Email or Phone</string>
+    <string name="login">Log In</string>
+    <string name="signup">Sign Up for Facebook</string>
+    <string name="forgot_pwd">Forgot Password</string>
+</resources>

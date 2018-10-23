@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="main_margin">50dp</dimen>
+    <dimen name="main_font_size">15sp</dimen>
+    <dimen name="icon_bottom_margin">50dp</dimen>
+    <dimen name="tv_bottom_margin">20dp</dimen>
+    <dimen name="main_icon_size">50dp</dimen>
+    <dimen name="question_mark_icon_size">20dp</dimen>
+    <dimen name="small_margin">10dp</dimen>
+</resources>
