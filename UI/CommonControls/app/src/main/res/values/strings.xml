@@ -1,0 +1,48 @@
+<resources>
+    <string name="app_name">CommonControls</string>
+    <string name="title_of_toolbar">title of toolbar</string>
+    <string name="subtitle_of_toolbar">subtitle of toolbar</string>
+    <string name="toast_demo">this is your first use of toast</string>
+    <string name="title_normal_alertdialog">A Normal AlertDialog</string>
+    <string name="pos_btn">OK</string>
+    <string name="neg_btn">NO</string>
+    <string name="neu_btn">Nothing</string>
+    <string name="clicked">%d(which) clicked</string>
+    <string name="title_single_alertdialog">A Single Choice AlertDialog</string>
+    <string name="title_multi_alertdialog">A Multi Choice AlertDialog</string>
+    <string name="title_notification">Title of Notification</string>
+    <string name="content_notification">Just have a try of notification</string>
+    <string name="tv_from_notification">Jump from Notification</string>
+
+    <string name="ctxmenu_hh">HaHa</string>
+    <string name="ctxmenu_test">Test</string>
+    <string name="opmenu_add">Add</string>
+    <string name="opmenu_del">Del</string>
+    <string name="opmenu_search">Search</string>
+
+    <string-array name="single_alertdialog">
+        <item>single 01</item>
+        <item>single 02</item>
+        <item>single 03</item>
+        <item>single 04</item>
+        <item>single 05</item>
+        <item>single 06</item>
+        <item>single 07</item>
+        <item>single 08</item>
+        <item>single 09</item>
+        <item>single 10</item>
+    </string-array>
+
+    <string-array name="multi_alertdialog">
+        <item>multi 01</item>
+        <item>multi 02</item>
+        <item>multi 03</item>
+        <item>multi 04</item>
+        <item>multi 05</item>
+        <item>multi 06</item>
+        <item>multi 07</item>
+        <item>multi 08</item>
+        <item>multi 09</item>
+        <item>multi 10</item>
+    </string-array>
+</resources>
