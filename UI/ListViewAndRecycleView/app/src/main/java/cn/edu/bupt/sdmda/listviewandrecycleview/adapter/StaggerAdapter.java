@@ -46,10 +46,10 @@ public class StaggerAdapter extends RecyclerView.Adapter<StaggerAdapter.ViewHold
         return _n;
     }
 
-    public static class ViewHolder extends RecyclerView.ViewHolder{
+    static class ViewHolder extends RecyclerView.ViewHolder{
         ImageView iv;
 
-        public ViewHolder(@NonNull View itemView) {
+        ViewHolder(@NonNull View itemView) {
             super(itemView);
             iv = itemView.findViewById(R.id.iv);
         }

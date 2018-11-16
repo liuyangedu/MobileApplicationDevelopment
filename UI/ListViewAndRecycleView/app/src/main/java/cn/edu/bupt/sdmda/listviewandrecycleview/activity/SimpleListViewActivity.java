@@ -28,7 +28,8 @@ public class SimpleListViewActivity extends AppCompatActivity {
 
     void initView(){
         lv = findViewById(R.id.simple_listview);
-        SimpleAdapter sa = new SimpleAdapter(this, getData(), R.layout.simple_listview,
+        SimpleAdapter sa = new SimpleAdapter(this, getData(),
+                R.layout.simple_listview,
                 new String[]{"icon", "title", "content"},
                 new int[]{R.id.iv_icon, R.id.lv_title, R.id.lv_content});
 

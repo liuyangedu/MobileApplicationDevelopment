@@ -4,4 +4,5 @@
     <dimen name="icon_size">90dp</dimen>
     <dimen name="small_size">20sp</dimen>
     <dimen name="image_margin">5dp</dimen>
+    <dimen name="divider_size">3dp</dimen>
 </resources>

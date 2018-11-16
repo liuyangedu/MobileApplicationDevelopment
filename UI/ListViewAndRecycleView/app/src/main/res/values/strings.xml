@@ -7,6 +7,7 @@
     <string name="btn_stagger_rv">ListView using Staggered RecyclerView</string>
     <string name="title_toolbar">Toolbar</string>
     <string name="imageview_clicked">ImageView %d is clicked</string>
+    <string name="imageview_longclicked">ImageView %d is long clicked</string>
     <string name="menu_add">add</string>
     <string name="menu_delete">del</string>
     <string name="btn_in_rv">Inner</string>

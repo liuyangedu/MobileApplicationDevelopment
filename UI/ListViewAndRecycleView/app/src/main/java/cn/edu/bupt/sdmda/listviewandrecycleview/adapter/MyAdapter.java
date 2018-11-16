@@ -53,12 +53,11 @@ public class MyAdapter extends BaseAdapter {
 //    public View getView(final int position, View convertView, ViewGroup parent) {
 //        if(convertView==null){
 //            convertView = _inflater.inflate(_layout, parent, false);
-//
 //        }
 //
 //        ImageView iv = convertView.findViewById(R.id.lv_icon);
 //        iv.setImageResource((int)_data.get(position).get("icon"));
-//        iv.setOnClickListener(new View.OnClickListener() {
+//        iv.setOnClickListener(new View.OnItemClickListener() {
 //            @Override
 //            public void onClick(View v) {
 //                Toast.makeText(_ctx, String.format(_ctx.getResources().
