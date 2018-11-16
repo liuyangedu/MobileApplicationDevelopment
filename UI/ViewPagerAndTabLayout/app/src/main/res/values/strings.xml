@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ViewPagerAndTabLayout</string>
+    <string name="menu_add">ADD</string>
+    <string name="menu_del">DEL</string>
+</resources>
