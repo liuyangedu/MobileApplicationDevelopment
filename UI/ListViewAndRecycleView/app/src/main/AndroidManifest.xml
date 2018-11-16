@@ -19,7 +19,8 @@
         <activity android:name=".activity.ArrayListViewActivity" />
         <activity android:name=".activity.SimpleListViewActivity" />
         <activity android:name=".activity.CustomListViewActivity" />
-        <activity android:name=".activity.RecycleViewActivity"></activity>
+        <activity android:name=".activity.RecyclerViewActivity" />
+        <activity android:name=".activity.StaggerRecyclerViewActivity"></activity>
     </application>
 
 </manifest>

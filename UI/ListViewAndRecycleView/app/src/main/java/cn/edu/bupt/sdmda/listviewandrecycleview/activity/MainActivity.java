@@ -10,7 +10,7 @@ import cn.edu.bupt.sdmda.listviewandrecycleview.R;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    Button btnAL, btnSL, btnCL, btnRV;
+    Button btnAL, btnSL, btnCL, btnRV, btnSRV;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,11 +24,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnSL = findViewById(R.id.btn_simple_lv);
         btnCL = findViewById(R.id.btn_custom_lv);
         btnRV = findViewById(R.id.btn_rv);
+        btnSRV = findViewById(R.id.btn_stagger_rv);
 
         btnAL.setOnClickListener(this);
         btnSL.setOnClickListener(this);
         btnCL.setOnClickListener(this);
         btnRV.setOnClickListener(this);
+        btnSRV.setOnClickListener(this);
     }
 
     @Override
@@ -45,7 +47,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 intent = new Intent(this, CustomListViewActivity.class);
                 break;
             case R.id.btn_rv:
-                intent = new Intent(this, RecycleViewActivity.class);
+                intent = new Intent(this, RecyclerViewActivity.class);
+                break;
+            case R.id.btn_stagger_rv:
+                intent = new Intent(this, StaggerRecyclerViewActivity.class);
                 break;
         }
         if(intent!=null){

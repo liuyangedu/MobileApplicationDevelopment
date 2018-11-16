@@ -46,5 +46,15 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/btn_custom_lv" />
 
+    <Button
+        android:id="@+id/btn_stagger_rv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_stagger_rv"
+        android:textSize="@dimen/big_size"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_rv" />
+
 
 </android.support.constraint.ConstraintLayout>

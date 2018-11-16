@@ -30,7 +30,7 @@ public class SimpleListViewActivity extends AppCompatActivity {
         lv = findViewById(R.id.simple_listview);
         SimpleAdapter sa = new SimpleAdapter(this, getData(), R.layout.simple_listview,
                 new String[]{"icon", "title", "content"},
-                new int[]{R.id.lv_icon, R.id.lv_title, R.id.lv_content});
+                new int[]{R.id.iv_icon, R.id.lv_title, R.id.lv_content});
 
         lv.setAdapter(sa);
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -47,7 +47,7 @@ public class SimpleListViewActivity extends AppCompatActivity {
 
     static List<Map<String, Object>> getData(){
         ArrayList<Map<String, Object>> list = new ArrayList<>();
-        int N = 10;
+        int N = 100;
         for(int i=0; i<N; ++i){
             Map<String, Object> map = new HashMap<>();
             map.put("icon", android.R.drawable.btn_star);

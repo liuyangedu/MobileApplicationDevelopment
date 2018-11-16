@@ -2,10 +2,12 @@ package cn.edu.bupt.sdmda.listviewandrecycleview.adapter;
 
 import android.content.Context;
 import android.support.annotation.LayoutRes;
+import android.view.ContextMenu;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -77,13 +79,15 @@ public class MyAdapter extends BaseAdapter {
     // TODO: getView WITH ViewHolder
     @Override
     public View getView(final int position, View convertView, ViewGroup parent) {
-        ViewHolder vh = null;
+        final int i = position;
+        ViewHolder vh;
         if(convertView==null){
             convertView = _inflater.inflate(_layout, parent, false);
             vh = new ViewHolder();
-            vh.iv =  convertView.findViewById(R.id.lv_icon);
+            vh.iv =  convertView.findViewById(R.id.iv_icon);
             vh.title = convertView.findViewById(R.id.lv_title);
             vh.content = convertView.findViewById(R.id.lv_content);
+            vh.btn = convertView.findViewById(R.id.btn_in_rv);
             convertView.setTag(vh);
         }
 
@@ -93,14 +97,37 @@ public class MyAdapter extends BaseAdapter {
         vh.iv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(_ctx, String.format(_ctx.getResources().getString(R.string.imageview_clicked), position),
+                Toast.makeText(_ctx, String.format(_ctx.getResources().getString(R.string.imageview_clicked), i),
                         Toast.LENGTH_SHORT).show();
             }
         });
 
-        vh.title.setText(_data.get(position).get("title").toString());
-        vh.content.setText(_data.get(position).get("content").toString());
+        vh.title.setText(_data.get(i).get("title").toString());
+        vh.content.setText(_data.get(i).get("content").toString());
+        vh.btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(_ctx,
+                        String.format(
+                                _ctx.getResources().getString(R.string.txt_toast_button_click),
+                                position),
+                        Toast.LENGTH_SHORT).show();
+            }
+        });
+        convertView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(_ctx,
+                        String.format(_ctx.getResources().getString(R.string.txt_toast_item_click), i),
+                        Toast.LENGTH_SHORT).show();
+            }
+        });
 
+        convertView.setOnCreateContextMenuListener(new View.OnCreateContextMenuListener() {
+            @Override
+            public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
+            }
+        });
         return convertView;
     }
 
@@ -122,9 +149,10 @@ public class MyAdapter extends BaseAdapter {
         }
     }
 
-    class ViewHolder {
+    public static class ViewHolder {
         ImageView iv;
         TextView title;
         TextView content;
+        Button btn;
     }
 }

@@ -4,8 +4,13 @@
     <string name="btn_simple_lv">ListView using SimpleAdapter</string>
     <string name="btn_custom_lv">ListView using Custom Adapter</string>
     <string name="btn_rv">ListView using RecyclerView</string>
+    <string name="btn_stagger_rv">ListView using Staggered RecyclerView</string>
     <string name="title_toolbar">Toolbar</string>
     <string name="imageview_clicked">ImageView %d is clicked</string>
     <string name="menu_add">add</string>
     <string name="menu_delete">del</string>
+    <string name="btn_in_rv">Inner</string>
+    <string name="txt_toast_item_click">item %d is clicked</string>
+    <string name="txt_toast_button_click">button in %d is clicked</string>
 </resources>
+

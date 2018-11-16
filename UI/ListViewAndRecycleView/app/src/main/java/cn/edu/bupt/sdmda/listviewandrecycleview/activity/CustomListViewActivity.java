@@ -9,7 +9,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import cn.edu.bupt.sdmda.listviewandrecycleview.adapter.MyAdapter;
 import cn.edu.bupt.sdmda.listviewandrecycleview.R;
@@ -38,16 +37,17 @@ public class CustomListViewActivity extends AppCompatActivity {
 
         ma = new MyAdapter(this, R.layout.simple_listview, SimpleListViewActivity.getData());
         lv.setAdapter(ma);
-        lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(CustomListViewActivity.this,
-                        parent.toString()+"\n\n"+
-                                view.toString()+"\n\n"+
-                                position+"\n\n"+id+"\n\n",
-                        Toast.LENGTH_SHORT).show();
-            }
-        });
+
+//        lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+//            @Override
+//            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+//                Toast.makeText(CustomListViewActivity.this,
+//                        parent.toString()+"\n\n"+
+//                                view.toString()+"\n\n"+
+//                                position+"\n\n"+id+"\n\n",
+//                        Toast.LENGTH_SHORT).show();
+//            }
+//        });
         registerForContextMenu(lv);
 
     }
@@ -74,7 +74,8 @@ public class CustomListViewActivity extends AppCompatActivity {
     }
 
     @Override
-    public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
+    public void onCreateContextMenu(ContextMenu menu, View v,
+                                    ContextMenu.ContextMenuInfo menuInfo) {
         switch (v.getId()){
             case R.id.custom_listview:
                 getMenuInflater().inflate(R.menu.main, menu);

@@ -1,32 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <ImageView
-        android:id="@+id/lv_icon"
+        android:id="@+id/iv_icon"
         android:layout_width="@dimen/icon_size"
         android:layout_height="@dimen/icon_size"
         android:scaleType="centerInside"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
+    <Button
+        android:id="@+id/btn_in_rv"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:text="@string/btn_in_rv"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/iv_icon"/>
 
     <TextView
         android:id="@+id/lv_title"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toEndOf="@id/lv_icon"
-        android:textSize="@dimen/big_size"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintStart_toEndOf="@id/iv_icon"
+        app:layout_constraintEnd_toStartOf="@id/btn_in_rv"
+        app:layout_constraintTop_toTopOf="@id/iv_icon"
+        android:textSize="@dimen/big_size" />
 
     <TextView
         android:id="@+id/lv_content"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintStart_toEndOf="@id/lv_icon"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/iv_icon"
+        app:layout_constraintEnd_toStartOf="@id/btn_in_rv"
         app:layout_constraintTop_toBottomOf="@id/lv_title"
-        app:layout_constraintBottom_toBottomOf="@id/lv_icon"/>
+        app:layout_constraintBottom_toBottomOf="@id/iv_icon"
+        android:textSize="@dimen/small_size"/>
+
+
 
 </android.support.constraint.ConstraintLayout>

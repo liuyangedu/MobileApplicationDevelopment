@@ -45,6 +45,6 @@ public class ArrayListViewActivity extends AppCompatActivity {
         for(int i=0; i<N; ++i){
             list.add("item " + i);
         }
-        return list.toArray(new String[list.size()]);
+        return list.toArray(new String[0]);
     }
 }
