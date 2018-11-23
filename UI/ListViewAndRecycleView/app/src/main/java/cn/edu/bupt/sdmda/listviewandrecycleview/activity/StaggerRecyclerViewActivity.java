@@ -21,7 +21,8 @@ public class StaggerRecyclerViewActivity extends AppCompatActivity {
 
     void initView(){
         rv = findViewById(R.id.rv);
-        StaggeredGridLayoutManager sglm = new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL);
+        StaggeredGridLayoutManager sglm = new StaggeredGridLayoutManager(2,
+                StaggeredGridLayoutManager.VERTICAL);
         rv.setLayoutManager(sglm);
         rv.setAdapter(new StaggerAdapter(this, R.layout.image_listview, 10));
     }
