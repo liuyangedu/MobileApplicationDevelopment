@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">EventDemo</string>
+    <string name="btn_path">Show Path</string>
+    <string name="btn_gesture">Gesture</string>
+    <string name="btn_custom_gesture">Custom Gesture</string>
+    <string name="dispatch_event">dispatching event [%s]</string>
+    <string name="intercept_event">intercepting event [%s]</string>
+    <string name="event_handled_success">event is handled [%s]</string>
+    <string name="event_handled_failed">event is not handled [%s]</string>
+    <string name="on_keydown">onKeyDown [%s]</string>
+    <string name="on_keyup">onKeyUp [%s]</string>
+    <string name="on_touch">onTouch [%s]</string>
+    <string name="on_click">onClick</string>
+    <string name="content">This is content</string>
+</resources>

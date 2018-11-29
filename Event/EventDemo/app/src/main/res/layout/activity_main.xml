@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".act.MainActivity">
+
+    <Button
+        android:id="@+id/btn_path"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_path"
+        android:textSize="@dimen/btn_main_text_size"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_gest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_gesture"
+        android:textSize="@dimen/btn_main_text_size"
+        app:layout_constraintTop_toBottomOf="@id/btn_path" />
+
+    <Button
+        android:id="@+id/btn_cust_gest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_custom_gesture"
+        android:textSize="@dimen/btn_main_text_size"
+        app:layout_constraintTop_toBottomOf="@id/btn_gest" />
+
+</android.support.constraint.ConstraintLayout>
