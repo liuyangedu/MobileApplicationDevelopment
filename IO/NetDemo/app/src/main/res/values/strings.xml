@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">NetDemo</string>
+    <string name="default_url">https://www.bupt.edu.cn</string>
+    <string name="hint_url">Input URL</string>
+    <string name="btn_get">Get</string>
+    <string name="btn_view">View</string>
+    <string name="connecting">Connecting</string>
+    <string name="no_network_tips">No network connection available.</string>
+    <string name="network_success">Success!</string>
+    <string name="process">%d</string>
+    <string name="process_known_all">%d/%d</string>
+</resources>

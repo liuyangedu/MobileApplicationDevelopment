@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">SharedPreferenceDemo</string>
+    <string name="hint_usr">Input Username here</string>
+    <string name="hint_pwd">Password</string>
+    <string name="checkbox_save">Save Username and Password</string>
+    <string name="btn_login">Login</string>
+    <string name="login_success">Success!!</string>
+    <string name="login_fail">Username or Password ERROR!!</string>
+</resources>

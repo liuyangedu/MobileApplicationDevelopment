@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">FileDemo</string>
+    <string name="read_from">read from %s</string>
+    <string name="write_to">write to %s</string>
+    <string name="file_not_found"> file [%s] not found</string>
+    <string name="btn_read_internal">R_I</string>
+    <string name="btn_write_internal">W_I</string>
+    <string name="btn_read_external_private">R_O_PR</string>
+    <string name="btn_write_external_private">W_O_PR</string>
+    <string name="btn_read_external_public">R_O_PU</string>
+    <string name="btn_write_external_public">W_O_PU</string>
+    <string name="default_status">status</string>
+    <string name="permission_granted">Permission Granted</string>
+    <string name="permission_not_granted">Permission NOT Granted</string>
+
+</resources>

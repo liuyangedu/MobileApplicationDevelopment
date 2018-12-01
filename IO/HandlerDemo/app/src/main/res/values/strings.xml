@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">HandlerDemo</string>
+    <string name="from_msg">Count %d from Message</string>
+    <string name="from_runnable">Count %d from Runnable</string>
+    <string name="default_content">Hello!</string>
+    <string name="btn_message">Count by Message</string>
+    <string name="btn_runnable">Count by Runnable</string>
+</resources>
