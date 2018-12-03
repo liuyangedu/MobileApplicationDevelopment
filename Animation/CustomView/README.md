@@ -6,11 +6,11 @@ act 目录下共四个 Activity。
 
 - MainActivity 为入口，各界面的跳转。
 
-- MyViewActivity 中演示了帧动画的相关内容
+- MyViewActivity 中演示了如何通过自定义视图实现动画
 
-- MySurfaceViewActivity 中演示了补间动画的相关内容
+- MySurfaceViewActivity 中演示了如何通过自定义SurfaceView实现动画
 
-- MyGLSurfaceViewActivity 中演示了属性动画的相关内容
+- MyGLSurfaceViewActivity 中演示了如何在安卓中使用 OpenGL
 
 views 目录下为相关的自定义 View。
 
