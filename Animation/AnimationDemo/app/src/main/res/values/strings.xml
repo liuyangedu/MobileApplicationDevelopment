@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">AnimationDemo</string>
+    <string name="tween_start">Tween Start</string>
+    <string name="tween_repeat">Tween Repeat</string>
+    <string name="tween_end">Tween End</string>
+    <string name="imageview_clicked">Infantry is here</string>
+    <string name="vpa_startaction">in VPA WithStartAction</string>
+    <string name="btn_frame_animation">Frame Animation</string>
+    <string name="btn_tween_animation">Tween Animation</string>
+    <string name="btn_property_animation">Property Animation</string>
+    <string name="bnt_layout_animation">Layout Animation</string>
+    <string name="btn_start">Start</string>
+    <string name="btn_stop">Stop</string>
+    <string name="btn_pause">Pause</string>
+    <string name="btn_alpha">Change Alpha</string>
+    <string name="btn_XY">Change XY</string>
+    <string name="btn_XY_run">Change XY And Run</string>
+    <string name="btn_value_animator">Value Aniamtor</string>
+    <string name="btn_object_animator">Object Aniamtor</string>
+    <string name="btn_multi_object_animator">Multi OA</string>
+    <string name="btn_view_property_animator">View PA</string>
+    <string name="btn_number">%d</string>
+    <string name="btn_add">Add</string>
+    <string name="cb_appearing">Appearing</string>
+    <string name="cb_change_appearing">Change Appearing</string>
+    <string name="cb_disappearing">Disappearing</string>
+    <string name="cb_change_disappearing">Change Disappearing</string>
+
+</resources>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_property_animation"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="cn.edu.bupt.sdmda.animationdemo.PropertyAnimationActivity">
+
+    <Button
+        android:id="@+id/btn_value_animator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_value_animator"
+        android:textSize="@dimen/text_size" />
+
+    <Button
+        android:id="@+id/btn_object_animator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_object_animator"
+        android:textSize="@dimen/text_size" />
+
+    <Button
+        android:id="@+id/btn_multi_object_animator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_multi_object_animator"
+        android:textSize="@dimen/text_size" />
+
+    <Button
+        android:id="@+id/btn_view_property_animator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_view_property_animator"
+        android:textSize="@dimen/text_size" />
+
+    <Button
+        android:id="@+id/btn_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_pause"
+        android:textSize="@dimen/text_size" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/img2" />
+    </FrameLayout>
+
+
+</LinearLayout>

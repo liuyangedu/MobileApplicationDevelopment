@@ -27,3 +27,8 @@
 - 数据库演示([DBDemo](./IO/DBDemo))
 - 网络演示([NetDemo](./IO/NetDemo))
 - Handler 演示([HandlerDemo](./IO/HandlerDemo))
+
+## 4. Animation
+
+- 基本动画演示([AnimationDemo](./Animation/AnimationDemo))
+- 自定义视图([CustomView](./Animation/CustomView))

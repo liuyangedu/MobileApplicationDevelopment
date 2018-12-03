@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">CustomView</string>
+    <string name="btn_myview">View</string>
+    <string name="btn_mysurfaceview">SurfaceView</string>
+    <string name="btn_myglsurfaceview">GLSurfaceView</string>
+</resources>
