@@ -155,11 +155,11 @@ public class MemoAdapter extends BaseAdapter{
         int id = (int)data.get(position).get(MemoContract.MemoTable._ID);
         SQLiteDatabase db = sqlHelper.getWritableDatabase();
         // use id to find that row
-        String selections = MemoContract.MemoTable._ID + " = ?";
+        String whereClause = MemoContract.MemoTable._ID + " = ?";
         // NOTE: convert id from int to string
-        String[] selectionArgs = {id+""};
+        String[] whereArgs = {id+""};
         // DELETE FROM MemoContract.MemoTable.TABLE_NAME WHERE selections=selectionArgs
-        db.delete(MemoContract.MemoTable.TABLE_NAME, selections, selectionArgs);
+        db.delete(MemoContract.MemoTable.TABLE_NAME, whereClause, whereArgs);
         // remove the data in the list
         data.remove(position);
         db.close();
