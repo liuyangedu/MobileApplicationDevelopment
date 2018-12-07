@@ -1,7 +1,9 @@
 <resources>
     <string name="app_name">DBDemo</string><string name="save">Save</string>
-    <string name="delete">Delete</string>
+
     <string name="hint_title">Title</string>
     <string name="hint_content">Content</string>
-
+    <string name="menu_add">Add</string>
+    <string name="menu_delete">Delete</string>
+    <string name="menu_save">Save</string>
 </resources>
