@@ -39,6 +39,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         context = this;
+        initView();
+    }
+
+    void initView() {
         btnReadInternal = findViewById(R.id.read_internal);
         btnWriteInternal = findViewById(R.id.write_internal);
         btnReadExternalPrivate = findViewById(R.id.read_external_private);
