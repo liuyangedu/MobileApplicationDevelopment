@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">GPSDemo</string>
+    <string name="read_loc_info_error">Read Location Informaion Error</string>
+    <string name="btn_get_all">Get All Providers</string>
+    <string name="btn_get_criteria">Get Providers with Criteria</string>
+    <string name="btn_get_loc">Get Location</string>
+
+
+    <string name="loc_info">
+        Current Location Information:\n
+        Longitude: %f\n
+        Latitude: %f\n
+        Altitude: %f\n
+        Speed: %f\n
+        Bearing: %f\n
+        Accuracy: %f\n
+    </string>
+</resources>

@@ -32,3 +32,13 @@
 
 - 基本动画演示([AnimationDemo](./Animation/AnimationDemo))
 - 自定义视图([CustomView](./Animation/CustomView))
+
+## 5. Component
+
+- 广播接收器([BroadcastReceiverDemo](./Component/BroadcastReceiverDemo))
+- 服务([ServiceDemo](./Component/ServiceDemo))
+
+## 6. 传感器
+
+- 通用的传感器读值([ReadValueFromSensors](./Sensors/ReadValueFromSensors))
+- GPS([GPSDemo](./Sensors/GPSDemo))

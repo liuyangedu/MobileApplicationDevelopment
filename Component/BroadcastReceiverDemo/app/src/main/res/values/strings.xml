@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">BroadcastReceiverDemo</string>
+    <string name="title_static_notification">Static Receiver</string>
+    <string name="content_static_notification">SMS received [static]</string>
+    <string name="title_dynamic_notification">Dynamic Receiver</string>
+    <string name="content_dynamic_notification">SMS received [dynamic]</string>
+    <string name="permission_granted">Permission Granted</string>
+    <string name="permission_not_granted">Permission NOT Granted</string>
+    <string name="btn_dynamic">Dynamic Receiver</string>
+    <string name="btn_send">Send Broadcast</string>
+    <string name="btn_local">Local Broadcast</string>
+    <string name="btn_start">Start</string>
+    <string name="broadcast_received">Broadcast Received</string>
+</resources>
