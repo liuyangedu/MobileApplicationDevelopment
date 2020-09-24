@@ -9,16 +9,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity2"
+            android:icon="@android:drawable/ic_menu_call">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Main2Activity"
-            android:label="Main2"
-            android:icon="@android:drawable/ic_lock_lock">
+        <activity android:name=".MainActivity"
+            android:icon="@android:drawable/sym_call_missed">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
