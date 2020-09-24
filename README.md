@@ -3,7 +3,6 @@
 ## 1. UI
 - 两个入口 ([TwoEntryPoint](./UI/TwoEntryPoint))
 - 生命周期演示 ([LifeCycleDemo](./UI/LifeCycleDemo))
-- 可点击的 TextView ([ClickableTextView](./UI/ClickableTextView))
 - 显式Intent ([ExplicitIntent](./UI/ExplicitIntent))
 - 隐式Intent ([ImplicitIntent](./UI/ImplicitIntent))
 - 返回结果的 Intent ([IntentForResult](./UI/IntentForResult))
