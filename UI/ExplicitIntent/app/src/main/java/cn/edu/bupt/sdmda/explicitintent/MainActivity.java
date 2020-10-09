@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         switch (requestCode) {
-            case 1:
+            case REQUST_CODE1:
                 String str;
                 if (resultCode == RESULT_OK && data.getExtras() != null &&
                         (str = data.getExtras().getString(SecondActivity.KEY_DATA)) != null) {
