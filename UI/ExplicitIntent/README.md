@@ -2,8 +2,7 @@
 
 ## 1. Activity 跳转
 
-首先构建显式 Intent：`Intent intent = new Intent(MainActivity.this,
-                        SecondActivity.class);`
+首先构建显式 Intent：`Intent intent = new Intent(MainActivity.this, SecondActivity.class);`
                         
 注意构造函数的第一个参数，是 `Context` 类型，一般就是当前 Activity 的实例。如果在匿名接口（比如`View.OnClickListener`）中时，要用`类名.this`。
 
@@ -11,7 +10,9 @@
 
 ## 2. 参数传递
 
-`Intent` 中有一个 `Bundle` 叫 `Extra`，通过函数`PutExtra`可以在里面保存数据（注意静态变量和字符串资源的使用）
+`Intent` 中有一个 `Bundle` 叫 `Extra`，通过函数`PutExtra`可以在里面保存数据。一般Key使用静态变量保存（SecondActivity.KEY_MSG）。注意字符串尽量不要硬编码（R.string.message)
+
+1. 使用静态变量设置Key和字符串资源的使用
 
 ```
 intent.putExtra(SecondActivity.KEY_MSG,
@@ -19,29 +20,57 @@ intent.putExtra(SecondActivity.KEY_MSG,
 ```
 
 
-被打开的 Activity 通过`getIntent()`获取这个 Intent，并通过`getExtra`等函数从中取值。（注意处理 null）
+被打开的 Activity 通过`getIntent()`获取这个 Intent，并通过`getExtra`等函数从中取值。注意if的第二个条件：它先获取字符串，并赋值给data；然后赋值表达式的特点直接判断data是否为空。
 
 ```
 Intent intent = getIntent();
-    if(intent.getExtras()!=null) {
-        String msg = intent.getExtras().getString(KEY_MSG);
-        tv.setText(msg);
-    }
+String data;
+if (intent.getExtras()!=null && 
+    (data = intent.getExtras().getString(KEY_MSG))!=null) {
+	tv.setText(data);
+}
 ```
 
-# 3. 给控件增加响应
+# 3. 控件绑定
+
+在XML文件中给需要绑定的控件增加id属性
+
+```xml
+<TextView
+        android:id="@+id/textview1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+```
+
+然后在Java代码中声明一个同类型的变量，并用`findViewById`函数根据id进行绑定。控件绑定一般在`onCreate`中完成。
+
+```java
+tv = findViewById(R.id.textview1);
+```
+
+
+
+# 4. 给控件增加响应
+
 一种较常用的给控件增加响应的方法是在 Java 代码中设置监听器(Listener)。
 
 ```
-btnS.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            Intent intent = new Intent(MainActivity.this,
-                    SecondActivity.class);
-            intent.putExtra(SecondActivity.KEY_MSG,
-                    getResources().getString(R.string.answer));
-            startActivity(intent);
-        }
+tv.setOnClickListener(new View.OnClickListener() {
+	@Override
+	public void onClick(View v) {
+		Intent intent = new Intent(
+			MainActivity.this,
+			SecondActivity.class
+		);
+		intent.putExtra(SecondActivity.KEY_MSG,
+			getResources().getString(R.string.message));
+		startActivity(intent);
+	}
 });
 ```
 

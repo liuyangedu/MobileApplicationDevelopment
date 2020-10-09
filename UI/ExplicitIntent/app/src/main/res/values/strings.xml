@@ -1,8 +1,4 @@
 <resources>
     <string name="app_name">ExplicitIntent</string>
-    <string name="content_main">First Activity</string>
-    <string name="btn_with_string_main">Answer</string>
-    <string name="btn_no_string_main">Jump</string>
-    <string name="content_sencond">Where are u from?</string>
-    <string name="answer">I come from MainActivity</string>
+    <string name="message">Message From Intent</string>
 </resources>
