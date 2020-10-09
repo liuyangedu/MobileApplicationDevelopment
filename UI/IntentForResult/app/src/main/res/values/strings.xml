@@ -1,7 +1,0 @@
-<resources>
-    <string name="app_name">IntentForResult</string>
-    <string name="default_textview">a normal textview</string>
-    <string name="btn_get">Get</string>
-    <string name="hint">input something</string>
-    <string name="btn_back">Back</string>
-</resources>

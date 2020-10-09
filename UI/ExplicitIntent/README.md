@@ -14,7 +14,7 @@
 
 1. 使用静态变量设置Key和字符串资源的使用
 
-```
+```java
 intent.putExtra(SecondActivity.KEY_MSG,
                         getResources().getString(R.string.answer));
 ```
@@ -22,7 +22,7 @@ intent.putExtra(SecondActivity.KEY_MSG,
 
 被打开的 Activity 通过`getIntent()`获取这个 Intent，并通过`getExtra`等函数从中取值。注意if的第二个条件：它先获取字符串，并赋值给data；然后赋值表达式的特点直接判断data是否为空。
 
-```
+```java
 Intent intent = getIntent();
 String data;
 if (intent.getExtras()!=null && 
@@ -59,7 +59,7 @@ tv = findViewById(R.id.textview1);
 
 一种较常用的给控件增加响应的方法是在 Java 代码中设置监听器(Listener)。
 
-```
+```java
 tv.setOnClickListener(new View.OnClickListener() {
 	@Override
 	public void onClick(View v) {
@@ -75,3 +75,10 @@ tv.setOnClickListener(new View.OnClickListener() {
 ```
 
 该函数需要一个`View.OnClickListener`类型的变量，上面的代码通过匿名接口的形式实现该接口。
+
+# 5. 需要返回结果的Intent
+
+假设从活动A跳转至活动B，并且希望B返回结果给A，关键步骤如下：
+1. 将A中的`StartActivity`改成`StartActivityForResult`
+2. 在A中重写`onActivityResult`函数
+3. 在B中通过`setReslut`设置结果

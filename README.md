@@ -5,7 +5,6 @@
 - 生命周期演示 ([LifeCycleDemo](./UI/LifeCycleDemo))
 - 显式Intent ([ExplicitIntent](./UI/ExplicitIntent))
 - 隐式Intent ([ImplicitIntent](./UI/ImplicitIntent))
-- 返回结果的 Intent ([IntentForResult](./UI/IntentForResult))
 - Activity的启动模式([ActivityStartMode](./UI/ActivityStartMode))
 - 模仿FaceBook的界面([FakeBook](./UI/FakeBook))
 - Fragment演示工程([FragmentDemo](./UI/FragmentDemo))
