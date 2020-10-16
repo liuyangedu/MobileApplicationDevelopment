@@ -5,38 +5,98 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:background="#3b5998">
+    android:background="@color/backGround">
 
-    <Button
-        android:id="@+id/center"
-        android:layout_width="wrap_content"
+    <EditText
+        android:id="@+id/et_pwd"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="      "
+        android:hint="@string/hint_pwd"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
+        android:inputType="textPassword"
+        android:layout_marginHorizontal="@dimen/common_horizontal_margin"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
-    <Button
-        android:id="@+id/left"
-        android:layout_width="wrap_content"
+
+    <EditText
+        android:id="@+id/et_usr"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="left"
+        android:hint="@string/hint_usr"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
+        android:layout_marginHorizontal="@dimen/common_horizontal_margin"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/et_pwd"
+        app:layout_constraintVertical_bias="1"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/center"
-        app:layout_constraintHorizontal_bias="1"/>
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <ImageView
+        android:id="@+id/iv_logo"
+        android:layout_width="@dimen/logo_sz"
+        android:layout_height="@dimen/logo_sz"
+        android:src="@drawable/main"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/et_usr"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
-        android:id="@+id/right"
+        android:id="@+id/btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:text="@string/btn_login"
+        android:layout_marginHorizontal="@dimen/common_horizontal_margin"
+        android:background="@color/lightBackGround"
+        app:layout_constraintTop_toBottomOf="@id/et_pwd"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+    <TextView
+        android:id="@+id/tv_forgot_pwd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="right"
-        app:layout_constraintTop_toTopOf="parent"
+        android:text="@string/forgot_pwd"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@id/center"
+        app:layout_constraintTop_toBottomOf="@id/btn_login"
+        app:layout_constraintVertical_bias="0.9"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0"/>
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_question"
+        android:layout_width="@dimen/question_sz"
+        android:layout_height="@dimen/question_sz"
+        android:src="@drawable/question_mark"
+        app:layout_constraintTop_toTopOf="@id/tv_forgot_pwd"
+        app:layout_constraintBottom_toBottomOf="@id/tv_forgot_pwd"
+        app:layout_constraintStart_toEndOf="@id/tv_forgot_pwd"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.8"/>
+
+    <TextView
+        android:id="@+id/tv_signup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/signup"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/btn_login"
+        app:layout_constraintBottom_toTopOf="@id/tv_forgot_pwd"
+        app:layout_constraintVertical_bias="0.9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
