@@ -5,7 +5,7 @@
 - 生命周期演示 ([LifeCycleDemo](./UI/LifeCycleDemo))
 - 显式Intent ([ExplicitIntent](./UI/ExplicitIntent))
 - 隐式Intent ([ImplicitIntent](./UI/ImplicitIntent))
-- Activity的启动模式([ActivityStartMode](./UI/ActivityStartMode))
+- 返回栈和启动模式([BackStackAndLaunchMode](./UI/BackStackAndLaunchMode))
 - 模仿FaceBook的界面([FakeBook](./UI/FakeBook))
 - Fragment演示工程([FragmentDemo](./UI/FragmentDemo))
 - 常用控件([CommonControls](./UI/CommonControls))
