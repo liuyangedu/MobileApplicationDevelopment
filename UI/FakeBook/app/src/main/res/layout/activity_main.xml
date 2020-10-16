@@ -1,89 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/backGround"
-    tools:context=".MainActivity">
-
-    <EditText
-        android:id="@+id/et_pwd"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_marginStart="@dimen/main_margin"
-        android:layout_marginEnd="@dimen/main_margin"
-        android:inputType="textPassword"
-        android:hint="@string/hint_pwd"
-        android:textColor="@color/white"
-        android:textColorHint="@color/white"
-        android:textSize="@dimen/main_font_size"/>
-
-    <EditText
-        android:id="@+id/et_usr"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/main_margin"
-        android:layout_marginEnd="@dimen/main_margin"
-        android:layout_above="@id/et_pwd"
-        android:hint="@string/hint_usr"
-        android:textColorHint="@color/white"
-        android:textColor="@color/white"
-        android:textSize="@dimen/main_font_size"/>
-
-    <ImageView
-        android:id="@+id/iv_main"
-        android:layout_width="@dimen/main_icon_size"
-        android:layout_height="@dimen/main_icon_size"
-        android:layout_centerHorizontal="true"
-        android:layout_above="@id/et_usr"
-        android:src="@drawable/main"
-        android:layout_marginBottom="@dimen/icon_bottom_margin"/>
+    tools:context=".MainActivity"
+    android:background="#3b5998">
 
     <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/main_margin"
-        android:layout_marginEnd="@dimen/main_margin"
-        android:text="@string/login"
-        android:background="@color/lightBackGround"
-        android:layout_below="@id/et_pwd"
-        android:textColor="@color/white"
-        android:textSize="@dimen/main_font_size"/>
-
-
-
-    <TextView
-        android:id="@+id/tv_forgotpwd"
+        android:id="@+id/center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/forgot_pwd"
-        android:textColor="@color/white"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:textSize="@dimen/main_font_size"
-        android:layout_marginBottom="@dimen/tv_bottom_margin"/>
-
-
-    <TextView
-        android:id="@+id/tv_signup"
+        android:text="      "
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+    <Button
+        android:id="@+id/left"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/signup"
-        android:textColor="@color/white"
-        android:layout_above="@id/tv_forgotpwd"
-        android:layout_centerHorizontal="true"
-        android:textSize="@dimen/main_font_size"
-        android:layout_marginBottom="@dimen/small_margin"/>
-    
-    <ImageView
-        android:id="@+id/iv_question"
-        android:layout_width="@dimen/question_mark_icon_size"
-        android:layout_height="@dimen/question_mark_icon_size"
-        android:src="@drawable/question_mark"
-        android:layout_alignBottom="@id/tv_forgotpwd"
-        android:layout_toEndOf="@id/tv_forgotpwd"
-        android:textSize="@dimen/main_font_size"
-        android:layout_marginStart="@dimen/tv_bottom_margin"/>
-</RelativeLayout>
+        android:text="left"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/center"
+        app:layout_constraintHorizontal_bias="1"/>
+
+    <Button
+        android:id="@+id/right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="right"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

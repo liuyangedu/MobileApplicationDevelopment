@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".StandardActivity">
+
+    <Button
+        android:id="@+id/btn_standard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/btn_text_font_size"
+        android:text="@string/btn_standard" />
+
+    <Button
+        android:id="@+id/btn_single_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/btn_text_font_size"
+        android:text="@string/btn_single_top" />
+
+    <Button
+        android:id="@+id/btn_single_task"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/btn_text_font_size"
+        android:text="@string/btn_single_task" />
+
+    <Button
+        android:id="@+id/btn_single_task_affinity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/btn_text_font_size"
+        android:text="@string/btn_single_task_affinity" />
+
+    <Button
+        android:id="@+id/btn_single_instance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/btn_text_font_size"
+        android:text="@string/btn_single_instance" />
+
+    <Button
+        android:id="@+id/btn_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/btn_text_font_size"
+        android:text="@string/btn_dialog" />
+
+    <TextView
+        android:id="@+id/text_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/btn_text_font_size"
+        android:gravity="center"
+        android:hint="@string/tv_hint_text"/>
+</LinearLayout>
