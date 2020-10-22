@@ -1,17 +1,16 @@
 package cn.edu.bupt.sdmda.fragmentdemo.fragment;
 
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
-import cn.edu.bupt.sdmda.fragmentdemo.activity.IChangeFragment;
+import androidx.fragment.app.Fragment;
+
 import cn.edu.bupt.sdmda.fragmentdemo.R;
+import cn.edu.bupt.sdmda.fragmentdemo.activity.IChangeFragment;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -56,7 +55,7 @@ public class ListFragment extends Fragment
     @Override
     public void onClick(View v) {
         IChangeFragment act = (IChangeFragment) getActivity();
-        if (act ==null) {
+        if (act == null) {
             Log.e(TAG, "error in ListFragment onClick");
             return;
         }

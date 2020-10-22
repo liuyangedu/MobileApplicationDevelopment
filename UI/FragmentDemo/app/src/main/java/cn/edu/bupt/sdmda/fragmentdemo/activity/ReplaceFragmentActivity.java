@@ -1,13 +1,13 @@
 package cn.edu.bupt.sdmda.fragmentdemo.activity;
 
+import android.os.Bundle;
+import android.widget.FrameLayout;
+
 import androidx.annotation.IdRes;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
-
-import android.os.Bundle;
-import android.widget.FrameLayout;
 
 import cn.edu.bupt.sdmda.fragmentdemo.R;
 import cn.edu.bupt.sdmda.fragmentdemo.fragment.ETFragment;
@@ -20,7 +20,8 @@ public class ReplaceFragmentActivity extends AppCompatActivity
     FrameLayout left, right;
     FragmentManager fm;
     boolean isLandscape;
-    @IdRes int layoutContainer;
+    @IdRes
+    int layoutContainer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,14 +37,13 @@ public class ReplaceFragmentActivity extends AppCompatActivity
         if (right != null) {
             isLandscape = true;
             layoutContainer = R.id.right_container;
-        }
-        else {
+        } else {
             isLandscape = false;
             layoutContainer = R.id.left_container;
         }
     }
 
-    void initFrag(){
+    void initFrag() {
         fm = getSupportFragmentManager();
 
         ListFragment lf = ListFragment.newInstance();
@@ -61,7 +61,7 @@ public class ReplaceFragmentActivity extends AppCompatActivity
     public void changeTVFragment(String str) {
 
         Fragment frag = fm.findFragmentById(layoutContainer);
-        if(frag instanceof TVFragment) return;
+        if (frag instanceof TVFragment) return;
         TVFragment tf = TVFragment.newInstance(str);
         fm.beginTransaction().replace(layoutContainer, tf)
                 .addToBackStack(null)
@@ -71,7 +71,7 @@ public class ReplaceFragmentActivity extends AppCompatActivity
     @Override
     public void changeETFragment(String str) {
         Fragment frag = fm.findFragmentById(layoutContainer);
-        if(frag instanceof ETFragment) return;
+        if (frag instanceof ETFragment) return;
         ETFragment ef = ETFragment.newInstance(str);
         fm.beginTransaction().replace(layoutContainer, ef)
                 .addToBackStack(null)

@@ -1,9 +1,6 @@
 package cn.edu.bupt.sdmda.fragmentdemo.fragment;
 
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,8 +8,10 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 
-import cn.edu.bupt.sdmda.fragmentdemo.activity.IChangeFragment;
+import androidx.fragment.app.Fragment;
+
 import cn.edu.bupt.sdmda.fragmentdemo.R;
+import cn.edu.bupt.sdmda.fragmentdemo.activity.IChangeFragment;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -61,7 +60,7 @@ public class ETFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view=inflater.inflate(R.layout.fragment_et, container, false);
+        View view = inflater.inflate(R.layout.fragment_et, container, false);
         et = view.findViewById(R.id.edittext);
         et.setText(data);
         btn = view.findViewById(R.id.btn_send);
@@ -69,7 +68,7 @@ public class ETFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 IChangeFragment act = (IChangeFragment) getActivity();
-                if (act ==null) {
+                if (act == null) {
                     Log.e(TAG, "error in ETFragment onClick");
                     return;
                 }

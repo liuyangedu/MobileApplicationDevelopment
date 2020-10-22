@@ -1,17 +1,16 @@
 package cn.edu.bupt.sdmda.fragmentdemo.fragment;
 
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import cn.edu.bupt.sdmda.fragmentdemo.activity.IChangeFragment;
+import androidx.fragment.app.Fragment;
+
 import cn.edu.bupt.sdmda.fragmentdemo.R;
+import cn.edu.bupt.sdmda.fragmentdemo.activity.IChangeFragment;
 
 /**
  * A simple {@link Fragment} subclass.
