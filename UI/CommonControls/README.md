@@ -23,11 +23,11 @@
 3. 单选模式的AlertDialog
 4. 多选模式的AlertDialog
 5. 发送通知
-6. 展示Nine-patch图像
+6. 展示9-patch图像
 
 `FromNotificationAct`是点击顶端通知栏后会跳转到的Activity
 
-`NinePatchAct`为展示Nine-patch图像的Activity，里包含两个ImageView，分别显示了一张普通图像和一张Nine-patch图像。
+`NinePatchAct`为展示9-patch图像的Activity，里包含两个ImageView，分别显示了一张普通图像和一张9-patch图像。
 
 
 
