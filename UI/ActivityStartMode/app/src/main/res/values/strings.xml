@@ -1,8 +1,0 @@
-<resources>
-    <string name="app_name">ActivityStartMode</string>
-    <string name="btn_standard">standard</string>
-    <string name="btn_singletop">singletop</string>
-    <string name="btn_singletask">singletask</string>
-    <string name="btn_singletaskaff">singletaskAffinity</string>
-    <string name="btn_singleinstance">singleinstance</string>
-</resources>

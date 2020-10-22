@@ -1,13 +1,9 @@
 <resources>
     <string name="app_name">FragmentDemo</string>
-    <string name="title">This is title of WX</string>
-    <string name="btn_wx">WX</string>
-    <string name="btn_moment">Moment</string>
-    <string name="btn_my">MY</string>
-    <string name="hint_edittext">Enter Something</string>
-    <string name="btn_ok">OK</string>
-
-    <string name="btn_main_replace">Replace</string>
-    <string name="btn_main_hideshow">Hide And Show</string>
-
+    <string name="btn_rep_frag">Replace Fragment</string>
+    <string name="btn_hide_show_frag">Hide and Show Fragment</string>
+    <string name="btn_et_frag">EditText Fragment</string>
+    <string name="btn_tv_frag">TextView Fragment</string>
+    <string name="btn_send">Send</string>
+    <string name="hint">Input Something</string>
 </resources>
