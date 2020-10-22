@@ -6,24 +6,24 @@ import android.app.PendingIntent;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.support.v4.app.NotificationCompat;
-import android.support.v4.app.TaskStackBuilder;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.Toolbar;
 import android.view.ContextMenu;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.SearchView;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SearchView;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.app.NotificationCompat;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     Toolbar toolbar;
-    Button btnT, btnAN, btnAS, btnAM,  btnN, btn9;
+    Button btnT, btnAN, btnAS, btnAM, btnN, btn9;
 
     final int NOTIFICATION_ID = 1;
     final String CHANNEL_ID = "01";
@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()){
+        switch (v.getId()) {
             case R.id.btn_toast:
                 Toast.makeText(this, getResources().getString(R.string.toast_demo),
                         Toast.LENGTH_SHORT).show();
@@ -62,19 +62,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 
-    void initView(){
+    void initView() {
         toolbar = findViewById(R.id.toolbar);
         toolbar.setLogo(android.R.drawable.btn_star);
-        toolbar.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
+        toolbar.setBackgroundColor(getResources().getColor(R.color.colorWhite));
         toolbar.setTitle(R.string.title_of_toolbar);
         toolbar.setSubtitle(R.string.subtitle_of_toolbar);
 
         setSupportActionBar(toolbar);
 
         btnT = findViewById(R.id.btn_toast);
-        btnAN= findViewById(R.id.btn_alertdialog_normal);
-        btnAS= findViewById(R.id.btn_alertdialog_single);
-        btnAM= findViewById(R.id.btn_alertdialog_multi);
+        btnAN = findViewById(R.id.btn_alertdialog_normal);
+        btnAS = findViewById(R.id.btn_alertdialog_single);
+        btnAM = findViewById(R.id.btn_alertdialog_multi);
         btnN = findViewById(R.id.btn_notification);
         btn9 = findViewById(R.id.btn_ninepatch);
 
@@ -97,7 +97,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
-        switch (v.getId()){
+        switch (v.getId()) {
             case R.id.btn_toast:
                 getMenuInflater().inflate(R.menu.ctx_toast, menu);
                 break;
@@ -106,7 +106,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public boolean onContextItemSelected(MenuItem item) {
-        switch (item.getItemId()){
+        switch (item.getItemId()) {
             case R.id.ctx_hh:
                 Toast.makeText(this, getResources().getString(R.string.ctxmenu_hh), Toast.LENGTH_SHORT).show();
                 break;
@@ -116,7 +116,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()){
+        switch (item.getItemId()) {
             case R.id.op_add:
                 break;
             case R.id.op_del:
@@ -144,24 +144,24 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         return true;
     }
 
-    void createNormalAlertDialog(){
+    void createNormalAlertDialog() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle(getResources().getString(R.string.title_normal_alertdialog));
         builder.setPositiveButton(getResources().getString(R.string.pos_btn),
                 new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                Toast.makeText(MainActivity.this,
-                        String.format( getResources().getString(R.string.clicked), which),
-                        Toast.LENGTH_SHORT).show();
-            }
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Toast.makeText(MainActivity.this,
+                                String.format(getResources().getString(R.string.clicked), which),
+                                Toast.LENGTH_SHORT).show();
+                    }
 
-        });
+                });
         builder.setNeutralButton("neu", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 Toast.makeText(MainActivity.this,
-                        String.format( getResources().getString(R.string.clicked), which),
+                        String.format(getResources().getString(R.string.clicked), which),
                         Toast.LENGTH_SHORT).show();
             }
         });
@@ -170,46 +170,46 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 Toast.makeText(MainActivity.this,
-                        String.format( getResources().getString(R.string.clicked), which),
+                        String.format(getResources().getString(R.string.clicked), which),
                         Toast.LENGTH_SHORT).show();
             }
         });
         builder.create().show();
     }
 
-    void createSingleAlertDialog(){
+    void createSingleAlertDialog() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle(getResources().getString(R.string.title_single_alertdialog));
         builder.setItems(R.array.single_alertdialog, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 Toast.makeText(MainActivity.this,
-                        String.format( getResources().getString(R.string.clicked), which),
+                        String.format(getResources().getString(R.string.clicked), which),
                         Toast.LENGTH_SHORT).show();
             }
         });
         builder.create().show();
     }
 
-    void createMultiAlertDialog(){
+    void createMultiAlertDialog() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle(getResources().getString(R.string.title_multi_alertdialog));
         final boolean[] defaults = new boolean[getResources().getStringArray(R.array.multi_alertdialog).length];
-        for(int i=0;i<defaults.length; ++i){
-            if(0==i)    defaults[i] = true;
-            else        defaults[i] = false;
+        for (int i = 0; i < defaults.length; ++i) {
+            if (0 == i) defaults[i] = true;
+            else defaults[i] = false;
         }
         builder.setMultiChoiceItems(R.array.multi_alertdialog, defaults, new DialogInterface.OnMultiChoiceClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which, boolean isChecked) {
                 Toast.makeText(MainActivity.this,
-                        String.format( getResources().getString(R.string.clicked), which),
+                        String.format(getResources().getString(R.string.clicked), which),
                         Toast.LENGTH_SHORT).show();
                 defaults[which] = isChecked;
                 int cnt = 0;
-                for(boolean b : defaults){
-                    if(b)   ++cnt;
-                    if(cnt>3){
+                for (boolean b : defaults) {
+                    if (b) ++cnt;
+                    if (cnt > 3) {
                         dialog.cancel();
                         break;
                     }
@@ -219,7 +219,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         builder.create().show();
     }
 
-    void createNotification(){
+    void createNotification() {
 
         NotificationManager notificationManager = (NotificationManager) this.getSystemService(Context.NOTIFICATION_SERVICE);
 

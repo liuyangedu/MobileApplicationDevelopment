@@ -1,10 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".NinePatchAct">
+
+    <ImageView
+        android:id="@+id/iv_orig"
+        android:layout_width="300dp"
+        android:layout_height="150dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/ball"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_orig" />
+
+    <ImageView
+        android:id="@+id/iv_nine"
+        android:layout_width="300dp"
+        android:layout_height="150dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/ball9"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_nine" />
+
+    <TextView
+        android:id="@+id/tv_nine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="nine patch"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_orig" />
 
     <TextView
         android:id="@+id/tv_orig"
@@ -14,32 +43,5 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-    <ImageView
-        android:id="@+id/iv_orig"
-        android:layout_width="300dp"
-        android:layout_height="150dp"
-        android:src="@drawable/ball"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_orig"
-        android:scaleType="fitXY"/>
 
-    <TextView
-        android:id="@+id/tv_nine"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="nine patch"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/iv_orig"/>
-
-    <ImageView
-        android:id="@+id/iv_nine"
-        android:layout_width="300dp"
-        android:layout_height="150dp"
-        android:src="@drawable/ball9"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_nine"
-        android:scaleType="fitXY"/>
-</android.support.constraint.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
