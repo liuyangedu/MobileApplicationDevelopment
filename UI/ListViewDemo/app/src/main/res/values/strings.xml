@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">ListViewDemo</string>
+    <string name="btn_arrayadapter">Array Adapter</string>
+    <string name="btn_simpleadapter">Simple Adapter</string>
+    <string name="btn_customadapter">Custom Adapter</string>
+    <string name="btn_inside">Inside</string>
+    <string name="btn_add">add</string>
+    <string name="btn_del">del</string>
+    <string name="iv_desc">just a icon</string>
+    <string name="item_clicked">item %d is clicked</string>
+    <string name="button_clicked">Button in item %d is clicked</string>
+    <string name="imageview_clicked">ImageView in item %d is clicked</string>
+
+</resources>

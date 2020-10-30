@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/btn_array_adapter"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:text="@string/btn_arrayadapter"
+        android:textSize="@dimen/text_size" />
+
+    <Button
+        android:id="@+id/btn_simple_adapter"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:text="@string/btn_simpleadapter"
+        android:textSize="@dimen/text_size" />
+
+    <Button
+        android:id="@+id/btn_custom_base_adapter"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:text="@string/btn_customadapter"
+        android:textSize="@dimen/text_size" />
+
+</LinearLayout>
