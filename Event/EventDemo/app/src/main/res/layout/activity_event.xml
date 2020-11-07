@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cn.edu.bupt.sdmda.eventdemo.views.MyFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frame_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".acts.EventActivity">
+
+    <cn.edu.bupt.sdmda.eventdemo.views.MyLinearLayout1
+        android:id="@+id/linear_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+
+        <cn.edu.bupt.sdmda.eventdemo.views.MyLinearLayout1
+            android:id="@+id/llu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="MyLinearLayout1"/>
+
+            <cn.edu.bupt.sdmda.eventdemo.views.MyEditText1
+                android:id="@+id/et1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="ET1" />
+
+            <cn.edu.bupt.sdmda.eventdemo.views.MyEditText2
+                android:id="@+id/et2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="ET2" />
+
+        </cn.edu.bupt.sdmda.eventdemo.views.MyLinearLayout1>
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:layout_margin="3dp"
+            android:background="#000000" />
+
+        <cn.edu.bupt.sdmda.eventdemo.views.MyLinearLayout2
+            android:id="@+id/lld"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="MyLinearLayout1"/>
+            <cn.edu.bupt.sdmda.eventdemo.views.MyEditText3
+                android:id="@+id/et3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="ET3" />
+
+            <cn.edu.bupt.sdmda.eventdemo.views.MyEditText4
+                android:id="@+id/et4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="ET4" />
+
+        </cn.edu.bupt.sdmda.eventdemo.views.MyLinearLayout2>
+    </cn.edu.bupt.sdmda.eventdemo.views.MyLinearLayout1>
+
+
+</cn.edu.bupt.sdmda.eventdemo.views.MyFrameLayout>

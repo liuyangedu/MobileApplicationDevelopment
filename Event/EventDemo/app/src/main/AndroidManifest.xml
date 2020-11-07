@@ -9,16 +9,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".act.MainActivity">
+        <activity android:name=".acts.TouchViewActivity"></activity>
+        <activity android:name=".acts.EventActivity" />
+        <activity android:name=".acts.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".act.PathActivity" />
-        <activity android:name=".act.GestureActivity" />
-        <activity android:name=".act.CustomGestureActivity"></activity>
     </application>
 
 </manifest>

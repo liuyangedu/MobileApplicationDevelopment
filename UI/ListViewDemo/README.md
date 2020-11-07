@@ -8,7 +8,7 @@
 3. `SimpleAdapterActivity`。演示`SimpleAdapterActivity`使用的活动
 4. `CustomBaseAdapterActivity`。演示如何通过继承`BaseAdapter`实现自定义适配器的活动
 
-所有演示ListView的活动均使用布局`R.layout.activity_listview`。该布局上面大部分为`ListView`，紧跟着一个分割线，然后是两个按钮，分别对应在`ListView`中增加和删除数据
+所有演示ListView的活动均使用布局`R.layout.activity_listview`。该布局上面大部分为`ListView`，紧跟着一个分割线，然后是两个按钮，分别对应在`ListView`中增加和删除数据。
 
 
 

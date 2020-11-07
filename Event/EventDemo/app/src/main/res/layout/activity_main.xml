@@ -1,33 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".act.MainActivity">
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".acts.MainActivity">
 
     <Button
-        android:id="@+id/btn_path"
+        android:id="@+id/btn_event"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/btn_path"
-        android:textSize="@dimen/btn_main_text_size"
-        app:layout_constraintTop_toTopOf="parent" />
-
+        android:text="KeyAndMotionEvent"
+        android:textSize="25sp" />
     <Button
-        android:id="@+id/btn_gest"
+        android:id="@+id/btn_pointer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/btn_gesture"
-        android:textSize="@dimen/btn_main_text_size"
-        app:layout_constraintTop_toBottomOf="@id/btn_path" />
+        android:text="Pointer"
+        android:textSize="25sp"/>
 
-    <Button
-        android:id="@+id/btn_cust_gest"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/btn_custom_gesture"
-        android:textSize="@dimen/btn_main_text_size"
-        app:layout_constraintTop_toBottomOf="@id/btn_gest" />
-
-</android.support.constraint.ConstraintLayout>
+</LinearLayout>
