@@ -7,6 +7,7 @@ import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.widget.FrameLayout;
 
+import androidx.annotation.LayoutRes;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
@@ -49,6 +50,7 @@ public class MyFrameLayout extends FrameLayout {
             Log.e(TAG, "onKeyUp:" + keyCode);
         }
         return super.onKeyUp(keyCode, event);
+
     }
 
     @Override

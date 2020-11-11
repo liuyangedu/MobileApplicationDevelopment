@@ -69,9 +69,9 @@ public class EventActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_event);
-//        setContentView(R.layout.empty);
-        initView();
+//        setContentView(R.layout.activity_event);
+        setContentView(R.layout.empty);
+//        initView();
     }
 
     void initView() {
@@ -87,7 +87,7 @@ public class EventActivity extends AppCompatActivity {
 
         et1.setOnClickListener(clickListener);
 
-        et2.setOnTouchListener(touchListenerF);
+        et2.setOnTouchListener(touchListenerT);
         et2.setOnClickListener(clickListener);
     }
 

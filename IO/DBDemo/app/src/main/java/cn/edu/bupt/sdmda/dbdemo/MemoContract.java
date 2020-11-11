@@ -12,7 +12,8 @@ public final class MemoContract {
     private static final String TEXT_TYPE = " TEXT";
     private static final String COMMA_SEP = " ,";
 
-    private MemoContract() {}
+    private MemoContract() {
+    }
 
     public static class MemoTable implements BaseColumns {
         public static final String TABLE_NAME = "memo";

@@ -22,7 +22,7 @@ import java.util.Map;
 /**
  * Created by liuyang on 11/29/16.
  */
-public class MemoAdapter extends BaseAdapter{
+public class MemoAdapter extends BaseAdapter {
 
     // The viewholder
     public static class ViewHolder {
@@ -62,20 +62,20 @@ public class MemoAdapter extends BaseAdapter{
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         ViewHolder vh;
-        if(convertView == null) {
+        if (convertView == null) {
             convertView = inflater.inflate(resId, parent, false);
-            vh  = new ViewHolder();
+            vh = new ViewHolder();
             vh.vTitle = convertView.findViewById(R.id.memotitle);
-            vh.vModTime =  convertView.findViewById(R.id.modtime);
+            vh.vModTime = convertView.findViewById(R.id.modtime);
             convertView.setTag(vh);
         } else {
             vh = (ViewHolder) convertView.getTag();
         }
-        vh.vTitle.setText((String)data.get(position).get(MemoContract.MemoTable.COLUMN_NAME_TITLE));
+        vh.vTitle.setText((String) data.get(position).get(MemoContract.MemoTable.COLUMN_NAME_TITLE));
         // Get timestamp from data and format it
         DateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.CHINA);
         vh.vModTime.setText(df.format(new Timestamp(
-                Long.parseLong((String)data.get(position).get(MemoContract.MemoTable.COLUMN_NAME_MODTIME)))));
+                Long.parseLong((String) data.get(position).get(MemoContract.MemoTable.COLUMN_NAME_MODTIME)))));
         return convertView;
     }
 
@@ -106,7 +106,7 @@ public class MemoAdapter extends BaseAdapter{
                 sortOrder
         );
         // iterate all data and add them to "data"
-        while(c.moveToNext()) {
+        while (c.moveToNext()) {
             Map<String, Object> tempData = new HashMap<>();
             tempData.put(MemoContract.MemoTable.COLUMN_NAME_TITLE,
                     c.getString(c.getColumnIndex(MemoContract.MemoTable.COLUMN_NAME_TITLE)));
@@ -143,7 +143,7 @@ public class MemoAdapter extends BaseAdapter{
         values.put(MemoContract.MemoTable.COLUMN_NAME_CONTENT, c);
         values.put(MemoContract.MemoTable.COLUMN_NAME_MODTIME, modtime);
         String whereClause = MemoContract.MemoTable._ID + " = ?";
-        String[] whereArgs = new String[] {id+""};
+        String[] whereArgs = new String[]{id + ""};
         // UPDATE MemoContract.MemoTable.TABLE_NAME SET values.KEYS=values.VALUES WHERE whereClause=whereArgs
         db.update(MemoContract.MemoTable.TABLE_NAME, values, whereClause, whereArgs);
         db.close();
@@ -152,12 +152,12 @@ public class MemoAdapter extends BaseAdapter{
 
     public void deleteData(int position) {
         // get the id of data first
-        int id = (int)data.get(position).get(MemoContract.MemoTable._ID);
+        int id = (int) data.get(position).get(MemoContract.MemoTable._ID);
         SQLiteDatabase db = sqlHelper.getWritableDatabase();
         // use id to find that row
         String whereClause = MemoContract.MemoTable._ID + " = ?";
         // NOTE: convert id from int to string
-        String[] whereArgs = {id+""};
+        String[] whereArgs = {id + ""};
         // DELETE FROM MemoContract.MemoTable.TABLE_NAME WHERE selections=selectionArgs
         db.delete(MemoContract.MemoTable.TABLE_NAME, whereClause, whereArgs);
         // remove the data in the list

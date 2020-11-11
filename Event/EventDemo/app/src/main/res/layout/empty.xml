@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- 注意增加clickable，因为ViewGroup的clickable默认是false -->
 <!-- 这样它只会接收到第一个ACTION_DOWN, 不会接收后续事件  -->
-<cn.edu.bupt.sdmda.eventdemo.views.MyFrameLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<cn.edu.bupt.sdmda.eventdemo.views.MyFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true">
+
 
 </cn.edu.bupt.sdmda.eventdemo.views.MyFrameLayout>

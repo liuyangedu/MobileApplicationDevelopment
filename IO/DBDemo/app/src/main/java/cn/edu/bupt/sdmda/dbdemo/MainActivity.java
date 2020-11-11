@@ -2,7 +2,6 @@ package cn.edu.bupt.sdmda.dbdemo;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.ContextMenu;
 import android.view.Menu;
@@ -12,9 +11,11 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import java.util.Map;
 
-public class MainActivity extends AppCompatActivity implements AdapterView.OnItemClickListener{
+public class MainActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
 
     // variable  to access SQLite
     private MemoSQLHelper sqlHelper;
@@ -37,11 +38,11 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         initView();
     }
 
-    void initSQL(){
+    void initSQL() {
         sqlHelper = new MemoSQLHelper(this);
     }
 
-    void initView(){
+    void initView() {
         ListView lv = findViewById(R.id.listview);
         ma = new MemoAdapter(this, sqlHelper, R.layout.memo_item);
         lv.setAdapter(ma);
@@ -79,7 +80,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch(item.getItemId()) {
+        switch (item.getItemId()) {
             case R.id.menu_add:
                 // Start ContentActivity to add a new note
                 Intent intent = new Intent(this, ContentActivity.class);
@@ -92,21 +93,24 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         // Get result of ContentActivity
+
         if (resultCode == Activity.RESULT_OK) {
             // Get title, content, modtime from Intent
             String title = data.getExtras().getString(MemoContract.MemoTable.COLUMN_NAME_TITLE);
-            String content  = data.getExtras().getString(MemoContract.MemoTable.COLUMN_NAME_CONTENT);
+            String content = data.getExtras().getString(MemoContract.MemoTable.COLUMN_NAME_CONTENT);
             long modtime = data.getExtras().getLong(MemoContract.MemoTable.COLUMN_NAME_MODTIME);
             // if it is a new note, just add it
             // if it is a modification of old one, get id and update it
-            if(requestCode == REQUEST_CODE_ADD) {
-                ma.addMemo(title, content, modtime);;
-            } else if (requestCode == REQUEST_CODE_MOD){
+            if (requestCode == REQUEST_CODE_ADD) {
+                ma.addMemo(title, content, modtime);
+                ;
+            } else if (requestCode == REQUEST_CODE_MOD) {
                 int id = data.getExtras().getInt(MemoContract.MemoTable._ID);
                 ma.updateMemo(id, title, content, modtime);
             }
             ma.freshData();
             ma.notifyDataSetChanged();
+            super.onActivityResult(requestCode, resultCode, data);
         }
     }
 
@@ -116,11 +120,11 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         Map<String, Object> item = (Map) ma.getItem(position);
         // Put the title, content and id into the Intent
         intent.putExtra(MemoContract.MemoTable.COLUMN_NAME_TITLE,
-                (String)item.get(MemoContract.MemoTable.COLUMN_NAME_TITLE));
+                (String) item.get(MemoContract.MemoTable.COLUMN_NAME_TITLE));
         intent.putExtra(MemoContract.MemoTable.COLUMN_NAME_CONTENT,
-                (String)item.get(MemoContract.MemoTable.COLUMN_NAME_CONTENT));
+                (String) item.get(MemoContract.MemoTable.COLUMN_NAME_CONTENT));
         intent.putExtra(MemoContract.MemoTable._ID,
-                (int)item.get(MemoContract.MemoTable._ID));
+                (int) item.get(MemoContract.MemoTable._ID));
         startActivityForResult(intent, REQUEST_CODE_MOD);
     }
 }

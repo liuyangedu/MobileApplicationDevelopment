@@ -1,7 +1,8 @@
 package cn.edu.bupt.sdmda.sharedpreferencedemo;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class EmptyActivity extends AppCompatActivity {
 

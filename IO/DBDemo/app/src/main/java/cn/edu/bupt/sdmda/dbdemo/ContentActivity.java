@@ -2,12 +2,13 @@ package cn.edu.bupt.sdmda.dbdemo;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.EditText;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class ContentActivity extends AppCompatActivity {
 
@@ -25,17 +26,17 @@ public class ContentActivity extends AppCompatActivity {
 
     }
 
-    void initView(){
-        title =  findViewById(R.id.act_content_title);
+    void initView() {
+        title = findViewById(R.id.act_content_title);
         content = findViewById(R.id.act_content_content);
     }
 
-    void readInfoFromIntent(){
+    void readInfoFromIntent() {
         // get Intent
         Intent intent = getIntent();
         // If Extra of Intent is null, means that we pressed "add" button
         // or we click item in the listview, so we should get data from intent
-        if (intent.getExtras()!=null) {
+        if (intent.getExtras() != null) {
             String strTitle = intent.getExtras().getString(
                     MemoContract.MemoTable.COLUMN_NAME_TITLE);
             title.setText(strTitle);
@@ -70,7 +71,7 @@ public class ContentActivity extends AppCompatActivity {
                         System.currentTimeMillis());
                 // if id == -1 means this is a new note
                 // or we modified an old one, so we put _ID in Intent
-                if(-1!=id) {
+                if (-1 != id) {
                     intent.putExtra(MemoContract.MemoTable._ID, id);
                 }
                 // set result and finish this activity

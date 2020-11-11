@@ -60,9 +60,9 @@ public class MyLinearLayout2 extends LinearLayout {
     @Override
     public boolean onInterceptTouchEvent(MotionEvent ev) {
         Log.e(TAG, "onInterceptTouchEvent" + ev.toString());
-        return false;
+//        return false;
         // not clickable
-        // return true
+         return true;
 
     }
 }
