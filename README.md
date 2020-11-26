@@ -27,7 +27,7 @@
 - 网络演示([NetDemo](./IO/NetDemo))
 - Handler 演示([HandlerDemo](./IO/HandlerDemo))
 
-## ~~4. Animation*~~
+## ~~4. Animation~~
 
 - ~~基本动画演示([AnimationDemo](./Animation/AnimationDemo))~~
 - ~~自定义视图([CustomView](./Animation/CustomView))~~
@@ -41,5 +41,5 @@
 
 - 通用的传感器读值([ReadValueFromSensors](./Sensors/ReadValueFromSensors))
 - GPS([GPSDemo](./Sensors/GPSDemo))
-- SurfaceView演示([SurfaceViewDemo](./Sensors/GPSDemo))
+- SurfaceView演示([SurfaceViewDemo](./Sensors/SurfaceViewDemo))
 - Camera演示([CameraDemo](./Sensors/CameraDemo))
