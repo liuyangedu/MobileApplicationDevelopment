@@ -105,22 +105,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         @Override
         public void run() {
             for (int i = N; i > 0; --i) {
-//                final int fi = i;
-//                // construct a Runnable and post it to looper
-//                Runnable r = new Runnable() {
-//                    @Override
-//                    public void run() {
-//
-//                    }
-//                };
-//                handler.post(r);
-                runOnUiThread(new Runnable() {
+                final int fi = i;
+                // construct a Runnable and post it to looper
+                Runnable r = new Runnable() {
                     @Override
                     public void run() {
-                        tv.setText(String.format(
-//                                getResources().getString(R.string.from_runnable), fi));
+
                     }
-                });
+                };
+                handler.post(r);
                 try {
                     Thread.sleep(SLEEP_MS);
                 } catch (InterruptedException exp) {
