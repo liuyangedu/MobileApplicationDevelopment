@@ -11,11 +11,12 @@ public class MusicService extends Service {
 
     final String TAG = getClass().getSimpleName();
 
-    class MyBinder extends Binder{
+    class MyBinder extends Binder {
         void play() {
             player.start();
         }
-        void pause(){
+
+        void pause() {
             player.pause();
         }
     }
@@ -33,7 +34,6 @@ public class MusicService extends Service {
         binder = new MyBinder();
         return binder;
     }
-
 
 
     @Override
@@ -56,11 +56,11 @@ public class MusicService extends Service {
         return super.onStartCommand(intent, flags, startId);
     }
 
-    public void play(){
+    public void play() {
         player.start();
     }
 
-    public void pause(){
+    public void pause() {
         player.pause();
     }
 

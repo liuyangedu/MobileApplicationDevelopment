@@ -103,7 +103,6 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             // if it is a modification of old one, get id and update it
             if (requestCode == REQUEST_CODE_ADD) {
                 ma.addMemo(title, content, modtime);
-                ;
             } else if (requestCode == REQUEST_CODE_MOD) {
                 int id = data.getExtras().getInt(MemoContract.MemoTable._ID);
                 ma.updateMemo(id, title, content, modtime);
@@ -117,14 +116,14 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         Intent intent = new Intent(MainActivity.this, ContentActivity.class);
-        Map<String, Object> item = (Map) ma.getItem(position);
-        // Put the title, content and id into the Intent
+    Map<String, Object> item = (Map) ma.getItem(position);
+    // Put the title, content and id into the Intent
         intent.putExtra(MemoContract.MemoTable.COLUMN_NAME_TITLE,
-                (String) item.get(MemoContract.MemoTable.COLUMN_NAME_TITLE));
+            (String) item.get(MemoContract.MemoTable.COLUMN_NAME_TITLE));
         intent.putExtra(MemoContract.MemoTable.COLUMN_NAME_CONTENT,
-                (String) item.get(MemoContract.MemoTable.COLUMN_NAME_CONTENT));
+            (String) item.get(MemoContract.MemoTable.COLUMN_NAME_CONTENT));
         intent.putExtra(MemoContract.MemoTable._ID,
-                (int) item.get(MemoContract.MemoTable._ID));
-        startActivityForResult(intent, REQUEST_CODE_MOD);
-    }
+            (int) item.get(MemoContract.MemoTable._ID));
+    startActivityForResult(intent, REQUEST_CODE_MOD);
+}
 }

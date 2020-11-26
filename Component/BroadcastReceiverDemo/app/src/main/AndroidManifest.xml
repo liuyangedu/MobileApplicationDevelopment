@@ -5,6 +5,7 @@
     <uses-permission android:name="android.permission.RECEIVE_SMS" />
     <uses-permission android:name="android.permission.READ_SMS" />
 
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -19,7 +20,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <receiver
             android:name=".receiver.StaticReceiver"
             android:enabled="true"
@@ -29,9 +29,10 @@
             </intent-filter>
         </receiver>
 
+
         <activity android:name=".act.DynamicActivity" />
         <activity android:name=".act.SendActivity" />
-        <activity android:name=".act.LocalActivity"></activity>
+        <activity android:name=".act.LocalActivity"/>
     </application>
 
 </manifest>

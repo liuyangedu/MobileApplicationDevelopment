@@ -4,11 +4,12 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import cn.edu.bupt.sdmda.broadcastreceiverdemo.R;
 
@@ -26,7 +27,7 @@ public class SendActivity extends AppCompatActivity {
         initReceiver();
     }
 
-    void initView(){
+    void initView() {
         btn = findViewById(R.id.btn_send_broadcast);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -44,14 +45,14 @@ public class SendActivity extends AppCompatActivity {
         super.onDestroy();
     }
 
-    void initReceiver(){
+    void initReceiver() {
         receiver = new Receiver();
         IntentFilter intentFilter = new IntentFilter();
         intentFilter.addAction(DEMO_ACTION);
         registerReceiver(receiver, intentFilter);
     }
 
-    class Receiver extends BroadcastReceiver{
+    class Receiver extends BroadcastReceiver {
         @Override
         public void onReceive(Context context, Intent intent) {
             Toast.makeText(context, R.string.broadcast_received, Toast.LENGTH_SHORT).show();

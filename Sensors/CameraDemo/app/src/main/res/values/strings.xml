@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">CameraDemo</string>
+    <string name="btn_cam1">Camera1</string>
+    <string name="btn_cam2">Camera2</string>
+    <string name="capture">Capture</string>
+    <string name="flash_auto">AUTO</string>
+    <string name="flash_off">OFF</string>
+    <string name="flash_on">ON</string>
+    <string name="flash_red_eye">RE</string>
+    <string name="focus_auto">AUTO</string>
+</resources>

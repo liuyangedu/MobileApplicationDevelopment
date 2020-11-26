@@ -1,9 +1,9 @@
 package cn.edu.bupt.sdmda.handlerdemo;
 
+import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 import android.os.Message;
-import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -27,6 +27,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
         initView();
         initHandler();
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                //.....
+                //.
+            }
+        });
     }
 
     void initView() {
@@ -49,7 +56,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 switch (msg.what) {
                     case WHAT_MSG:
                         tv.setText(msg.getData().getString(KEY_MSG));
-                        break;
+                    break;
                 }
             }
         };
@@ -98,16 +105,22 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         @Override
         public void run() {
             for (int i = N; i > 0; --i) {
-                final int fi = i;
-                // construct a Runnable and post it to looper
-                Runnable r = new Runnable() {
+//                final int fi = i;
+//                // construct a Runnable and post it to looper
+//                Runnable r = new Runnable() {
+//                    @Override
+//                    public void run() {
+//
+//                    }
+//                };
+//                handler.post(r);
+                runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
                         tv.setText(String.format(
-                                getResources().getString(R.string.from_runnable), fi));
+//                                getResources().getString(R.string.from_runnable), fi));
                     }
-                };
-                handler.post(r);
+                });
                 try {
                     Thread.sleep(SLEEP_MS);
                 } catch (InterruptedException exp) {

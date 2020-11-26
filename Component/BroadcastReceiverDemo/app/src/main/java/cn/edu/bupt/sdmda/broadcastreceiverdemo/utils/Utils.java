@@ -6,8 +6,9 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.v4.app.NotificationCompat;
 import android.telephony.SmsMessage;
+
+import androidx.core.app.NotificationCompat;
 
 import cn.edu.bupt.sdmda.broadcastreceiverdemo.R;
 
@@ -22,7 +23,7 @@ public class Utils {
     public static void createNotification(Context context, String msg, String title) {
         NotificationManager notificationManager = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
 
-        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
 
             NotificationChannel mChannel = new NotificationChannel(CHANNEL_ID, CHANNEL_NAME, CHANNEL_IMPORTANCE);
             mChannel.setDescription(CHANNEL_DESC);
@@ -38,7 +39,7 @@ public class Utils {
         notificationManager.notify(NOTIFICATION_ID, builder.build());
     }
 
-    public static String readSMS(Intent intent){
+    public static String readSMS(Intent intent) {
         Bundle bundle = intent.getExtras();
         Object[] pdusObj = (Object[]) bundle.get("pdus");
         String format = bundle.getString("format");

@@ -6,11 +6,12 @@ import android.content.Intent;
 import android.content.ServiceConnection;
 import android.os.Bundle;
 import android.os.IBinder;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class BaseActivity extends AppCompatActivity {
     Button btnPlay, btnPause, btnChange, btnStart, btnStop, btnUnbind, btnBind;
@@ -67,14 +68,14 @@ public class BaseActivity extends AppCompatActivity {
         btnBind.setOnClickListener(clickListener);
     }
 
-    void doBindService(){
+    void doBindService() {
         Intent intent = new Intent(this, MusicService.class);
         bindService(intent, conn, Context.BIND_AUTO_CREATE);
         isBinded = true;
     }
 
-    void doUnbindService(){
-        if(isBinded){
+    void doUnbindService() {
+        if (isBinded) {
             unbindService(conn);
             isBinded = false;
         }
@@ -87,10 +88,10 @@ public class BaseActivity extends AppCompatActivity {
         public void onClick(View v) {
             switch (v.getId()) {
                 case R.id.btn_play:
-                    if(isBinded)    binder.play();
+                    if (isBinded) binder.play();
                     break;
                 case R.id.btn_pause:
-                    if(isBinded)    binder.pause();
+                    if (isBinded) binder.pause();
                     break;
                 case R.id.btn_start_service:
                     intent = new Intent(context, MusicService.class);
