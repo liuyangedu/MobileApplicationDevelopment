@@ -139,7 +139,7 @@ public class MainActivity extends AppCompatActivity {
                     location.getLongitude(),
                     location.getLatitude(),
                     location.getAltitude(),
-                    location.getAltitude(),
+                    location.getSpeed(),
                     location.getBearing(),
                     location.getAccuracy()
             );

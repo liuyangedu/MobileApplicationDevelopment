@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">ArchitectureDemo</string>
+    <string name="normal">Normal</string>
+    <string name="MVP">MVP</string>
+    <string name="guess">Guess</string>
+    <string name="reset">Reset</string>
+    <string name="status">Count: %d \nResult: %s\nGuessed:%d</string>
+    <string name="larger">Larger</string>
+    <string name="smaller">Smaller</string>
+    <string name="unknown">Unknown</string>
+    <string name="correct">Correct</string>
+    <string name="error">Error</string>
+    <string name="exceeded">Exceeded</string>
+    <string name="hint">Guess the number</string>
+    <string name="count">Count: </string>
+    <string name="result">Result: </string>
+    <string name="guessed">Guessed: </string>
+</resources>

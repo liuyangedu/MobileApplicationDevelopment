@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="cn.edu.bupt.sdmda.camerademo">
+    package="cn.edu.bupt.sdmda.architecturedemo">
 
     <application
         android:allowBackup="true"
@@ -9,8 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Camera1Activity"></activity>
-        <activity android:name=".Camera2Activity" />
+        <activity android:name=".MVVM.MVVMActivity"></activity>
+        <activity android:name=".MVP.MVPActivity" />
+        <activity android:name=".normal.NormalActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,7 +20,5 @@
             </intent-filter>
         </activity>
     </application>
-
-    <uses-permission android:name="android.permission.CAMERA" />
 
 </manifest>

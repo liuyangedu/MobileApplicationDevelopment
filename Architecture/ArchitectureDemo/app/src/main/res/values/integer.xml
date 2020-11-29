@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="max_count">10</integer>
+    <integer name="min_number">0</integer>
+    <integer name="max_number">100</integer>
+    <integer name="error_code">-1</integer>
+</resources>
