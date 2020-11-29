@@ -7,7 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import cn.edu.bupt.sdmda.architecturedemo.R
 import kotlinx.android.synthetic.main.activity_game.*
 
-//Activity扮演Controller
+//Activity扮演Presenter
 //处理业务逻辑，并连接View和Model
 class MVPActivity : AppCompatActivity() {
     private var model: MVPModel? = null
