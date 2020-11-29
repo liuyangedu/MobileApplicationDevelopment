@@ -43,3 +43,7 @@
 - GPS([GPSDemo](./Sensors/GPSDemo))
 - SurfaceView演示([SurfaceViewDemo](./Sensors/SurfaceViewDemo))
 - Camera演示([CameraDemo](./Sensors/CameraDemo))
+
+# 7. 架构
+
+- ArchitectureDemo([ArchitectureDemo](./Architecture/ArchitectureDemo))
